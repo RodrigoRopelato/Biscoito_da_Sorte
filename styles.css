@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+
+body{
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    font-size: 1.6rem;
+    
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+
+}
+
+.hide{
+    display:none;
+}
+
+
+main{
+    border-radius: .6rem;
+    background: #FFF;
+    box-shadow: 0 .2rem .5rem .0 rgba(0, 0, 0, 0.80);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+    width: min(42.8rem, 90%);
+   
+    margin-top: -12rem;
+
+    text-align: center;
+
+}
+
+body, button{
+    font-family: "DM Sans", sans-serif; 
+    }
+
+
+button{
+    background: 0%;
+    border-style: none;
+}
+
+/* screen 1*/
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-style: normal;
+    margin-bottom: 1.6rem ;
+
+}
+
+h1, p {
+    color: #34355B;
+}
+
+ form{
+    margin-top: 4.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+#btnLuck{
+    background: 0%;
+    border-style: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#btnLuck:hover{
+    animation: tremer 0.5s ease infinite;
+}
+
+
+/* screen 2*/
+
+.sorte {
+    background-color: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem .2rem rgba(85, 85, 85, 0.50);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    
+}
+
+.animacao {
+    
+    animation: expand 2s ease-in-out 1;
+    animation-fill-mode: forwards; /* Mantém o estado final da animação */
+    transform-origin: bottom center; /* Ponto de origem da transformação */
+}
+
+.sorte p {
+    color: #000;
+    text-align: center;
+    font-family: Dancing Script;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.openedCookie {
+    padding: 4.3rem 0.5rem 4.3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#btnReset{
+    padding: 1.6rem;
+    background-color: #FF9500 ;
+    border-radius: .4rem;
+    color: #FFF;
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+
+}
+
+#btnReset:hover{
+    background-color: #db8103 ;
+}
+
+/* Animações */
+@keyframes tremer {
+    0% {
+      transform: translate(-0.3rem, 0.3rem); /* Tremer para a esquerda e para cima */
+    }
+    25% {
+      transform: translate(0.3rem, -0.3rem); /* Tremer para a direita e para baixo */
+    }
+    50% {
+      transform: translate(-0.3rem, 0.3rem); /* Tremer para a esquerda e para cima */
+    }
+    75% {
+      transform: translate(0.3rem, -0.3rem); /* Tremer para a direita e para baixo */
+    }
+    100% {
+      transform: translate(0); /* Sem tremer */
+    }
+  }
+  
+  @keyframes expand {
+    0% {
+        transform: translateY(100%) scale(0); /* Começa pequena (invisível) e abaixo */
+        opacity: 0; /* Começa invisível */
+    }
+    100% {
+        transform: translateY(0) scale(1); /* Termina na posição original (acima) e no tamanho original */
+        opacity: 1; /* Torna-se visível */
+    }
+
+    
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
